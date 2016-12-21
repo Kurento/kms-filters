@@ -2,6 +2,9 @@ set (TEST_PROPERTIES
   GST_PLUGIN_PATH=${CMAKE_BINARY_DIR}
 )
 
+set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
+set (CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -pthread")
+
 add_test_program (test_filters_constructors constructors.cpp)
 add_dependencies(test_filters_constructors
   ${LIBRARY_NAME}module
