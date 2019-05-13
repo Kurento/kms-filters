@@ -6,13 +6,7 @@ add_test_program(test_filters_constructors constructors.cpp)
 if(TARGET ${LIBRARY_NAME}module)
   add_dependencies(test_filters_constructors ${LIBRARY_NAME}module)
 endif()
-add_dependencies(test_filters_constructors
-  facedetector
-  faceoverlay
-  imageoverlay
-  movementdetector
-  opencvfilter
-)
+
 set_property(TARGET test_filters_constructors
   PROPERTY INCLUDE_DIRECTORIES
     ${CMAKE_CURRENT_BINARY_DIR}/../..

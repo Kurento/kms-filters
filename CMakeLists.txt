@@ -51,7 +51,6 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DHAVE_CONFIG_H")
 
 set(GST_REQUIRED ^1.5.0)
 set(GLIB_REQUIRED ^2.38)
-set(OPENCV_REQUIRED <4.0.0)
 set(LIBSOUP_REQUIRED ^2.40)
 
 include(GenericFind)
@@ -59,7 +58,6 @@ generic_find(LIBNAME gstreamer-1.5 VERSION ${GST_REQUIRED} REQUIRED)
 generic_find(LIBNAME gstreamer-base-1.5 VERSION ${GST_REQUIRED} REQUIRED)
 generic_find(LIBNAME gstreamer-video-1.5 VERSION ${GST_REQUIRED} REQUIRED)
 generic_find(LIBNAME gstreamer-check-1.5 VERSION ${GST_REQUIRED})
-generic_find(LIBNAME opencv VERSION ${OPENCV_REQUIRED} REQUIRED)
 generic_find(LIBNAME libsoup-2.4 VERSION ${LIBSOUP_REQUIRED} REQUIRED)
 
 set(CMAKE_INSTALL_GST_PLUGINS_DIR ${CMAKE_INSTALL_LIBDIR}/gstreamer-1.5)
@@ -67,4 +65,4 @@ set(CMAKE_INSTALL_GST_PLUGINS_DIR ${CMAKE_INSTALL_LIBDIR}/gstreamer-1.5)
 enable_testing()
 
 add_subdirectory(src)
-add_subdirectory(tests)
+#add_subdirectory(tests)

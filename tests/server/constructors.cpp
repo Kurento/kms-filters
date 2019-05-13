@@ -95,9 +95,9 @@ main (int argc, char **argv)
 
   moduleManager.loadModule ("../../src/server/libkmsfiltersmodule.so");
 
-  testFaceOverlay (moduleManager, mediaPipeline);
+  //testFaceOverlay (moduleManager, mediaPipeline);
   testGStreamerFilter (moduleManager, mediaPipeline);
-  testZBarFilter (moduleManager, mediaPipeline);
+  //testZBarFilter (moduleManager, mediaPipeline);
 
   kurento::MediaSet::getMediaSet()->release (mediaPipeline);
 
